@@ -21,7 +21,7 @@ function typeMessage(message, index = 0) {
         messageElement.innerHTML += message.charAt(index);
         setTimeout(() => {
             typeMessage(message, index + 1);
-        }, 100);
+        }, 1);
     } else {
         // Setelah pesan selesai diketik, enable tombol
         isTyping = false;
@@ -38,7 +38,7 @@ function nextMessage() {
 
         typeMessage(messages[currentMessageIndex]);
         currentMessageIndex++;
-    } else if (currentMessageIndex >= messages.length) {
+    } else if (!isTyping && currentMessageIndex >= messages.length) {
         // Jika pesan terakhir sudah selesai, tampilkan pesan akhir
         messageElement.innerHTML = "Itu aja sih... Terima kasih udah mau baca 💖";
         nextButton.style.display = "none"; // Sembunyikan tombol setelah semua pesan ditampilkan
