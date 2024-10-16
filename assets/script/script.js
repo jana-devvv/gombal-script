@@ -21,7 +21,7 @@ function typeMessage(message, index = 0) {
         messageElement.innerHTML += message.charAt(index);
         setTimeout(() => {
             typeMessage(message, index + 1);
-        }, 1);
+        }, 30);
     } else {
         // Setelah pesan selesai diketik, enable tombol
         isTyping = false;
