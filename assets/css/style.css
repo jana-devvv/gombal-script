@@ -76,6 +76,15 @@ button:focus {
     outline: none;
 }
 
+button:disabled {
+    background-color: #ccc; /* Warna abu-abu untuk menandakan disabled */
+    color: #666; /* Warna teks yang lebih redup */
+    cursor: not-allowed; /* Ganti kursor menjadi 'not allowed' */
+    box-shadow: none; /* Hilangkan bayangan */
+    transform: none; /* Hilangkan efek transform saat klik */
+    opacity: 0.6; /* Kurangi opacity */
+}
+
 @media only screen and (max-width: 768px) {
     h1 {
         font-size: 1.8em;
